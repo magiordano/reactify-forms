@@ -5,9 +5,6 @@ import Signup from './Signup';
 import Login from './Login';
 
 
-
-
-
 function AppRouter() {
   return (
     <Router>
@@ -15,17 +12,16 @@ function AppRouter() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Sign Up</Link>
+              <a href="/">Sign Up</a>
             </li>
             <li>
-              <Link to="/Login/">Login</Link>
+              <a href="/Login/">Login</a>
             </li>
             <li>
-              <Link to="/Forgotpw/">Forgot Password</Link>
+              <a href="/Forgotpw/">Forgot Password</a>
             </li>
           </ul>
         </nav>
-
         <Route path="/" exact component={Signup} />
         <Route path="/Login/" component={Login} />
         <Route path="/Forgotpw/" component={Forgotpw} />
