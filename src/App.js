@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Forgotpw from './Forgotpw';
-import Signup from './Signup';
-import Login from './Login';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import Forgotpw from './components/Forgotpw';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import ReadUsers from './components/ReadUsers';
 
-
-function AppRouter() {
+function App() {
   return (
     <Router>
       <div>
@@ -20,17 +20,18 @@ function AppRouter() {
             <li>
               <a href="/Forgotpw/">Forgot Password</a>
             </li>
+            <li>
+              <a href="/ReadUsers/">Read Users</a>
+            </li>
           </ul>
         </nav>
         <Route path="/" exact component={Signup} />
         <Route path="/Login/" component={Login} />
         <Route path="/Forgotpw/" component={Forgotpw} />
+        <Route path="/ReadUsers/" component={ReadUsers} />
       </div>
     </Router>
 
-
   );
-  
- 
   }
-export default AppRouter;
+export default App
